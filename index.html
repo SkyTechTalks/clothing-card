@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clothing Card - Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="img-container">
+            <img src="shirt.webp" alt="Shirt" class="shirt-img" />
+            <img src="p shirt.jpg" alt="Person wearing shirt" class="person-img" />
+        </div>
+        <h3>Urban Vibes Tee</h3>
+        <p>The urban vibes tee captures the essence of modern city life with its sleek design and bold graphics.</p>
+        <div class="flip-container">
+            <div class="flip-box">
+                <div class="flip-box-front">
+                    <del>
+                        <span class="price">$21.00</span>
+                    </del>
+                    <ins>
+                        <span class="price">$19.00</span>
+                    </ins>
+                </div>
+                <div class="flip-box-back">
+                    <button>Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="favourite-container">
+            <button id="favourite-btn" class="favourite-btn">❤️</button>
+            <div id="favourite-text" class="favourite-text">Add to your favourites</div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('favourite-btn').addEventListener('click', function() {
+            var notification = document.getElementById('favourite-text');
+            notification.style.display = 'block';
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 2000); 
+        });
+    </script>
+</body>
+</html>
